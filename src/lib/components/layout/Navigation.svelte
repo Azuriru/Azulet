@@ -26,18 +26,11 @@
 
 <svelte:window bind:innerWidth={width}/>
 
-<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-<!-- svelte-ignore a11y-click-events-have-key-events -->
-<nav class:shrunken={width < 352} class="navigation flex w-full md:max-w-min">
-    <div class="scroller flex md:flex-col w-full uppercase tracking-widest overflow-x-auto bg-surface-800">
-        <!-- <div class="icon flex items-center justify-center w-10 h-10 md:w-8 md:h-8">
-            <img src={logo} alt="logo" class="logo w-8" />
-        </div> -->
-        <div class="menu hidden">
-            <FontAwesome name="bars" size="2xl"/>
-        </div>
-        <div class="nav-wrapper flex flex-col flex-1 justify-between">
-            <div class="nav start flex flex-1 md:flex-col justify-evenly md:justify-start">
+<nav class="navigation">
+	<input type="checkbox" id="shitty-checkbox-hack" class="hidden" />
+	<div class="nav flex w-full md:h-full uppercase tracking-widest">
+        <div class="options flex flex-1 md:flex-col bg-surface-800">
+            <div class="nav-start flex md:flex-col justify-evenly flex-1">
                 {#each navstart as [ name, title ]}
                     <div class="nav-item hover:bg-surface-500 flex flex-col md:flex-row md:flex-row-reverse items-center flex-shrink-0 px-2 py-2 md:pl-4 md:py-2">
                         <div class="icon flex items-center justify-center w-10 h-10 md:w-8 md:h-8">
@@ -49,7 +42,8 @@
                     </div>
                 {/each}
             </div>
-            <div class="nav end hidden md:flex flex-col">
+            <div class="spacer hidden md:flex flex-1" />
+            <div class="nav-end hidden md:flex md:flex-col">
                 {#each navend as [ name, title ]}
                     <div class="nav-item hover:bg-surface-500 flex flex-col md:flex-row md:flex-row-reverse items-center flex-shrink-0 px-2 py-2 md:pl-4 md:py-2">
                         <div class="icon flex items-center justify-center w-10 h-10 md:w-8 md:h-8">
@@ -62,45 +56,57 @@
                 {/each}
             </div>
         </div>
-    </div>
+        <label for="shitty-checkbox-hack" class="hamburger hidden items-center justify-center bg-surface-700">
+            <FontAwesome name="chevron-up" size="2xl"/>
+        </label>
+	</div>
 </nav>
 
-<style lang="scss">
-    :global(.navigation.shrunken) {
-        justify-content: center;
-    
-        .scroller {
-            width: min-content;
-            border-radius: 4px 4px 0 0;
+<style style="scss">
+	@media only screen and (max-width: 352px) {
+		.nav .options {
+			position: absolute;
+			flex-direction: column;
+            width: 100%;
+			transform: translate(0, 40px);
+			transition: transform 300ms ease-in-out;
+		}
+
+        .nav .nav-start,
+        .nav .nav-end {
+            flex-direction: column;
         }
         
-        .menu {
-            @apply flex;
-            height: 64px;
-            width: 64px;
-            justify-content: center;
-            align-items: center;
+        .nav .nav-end {
+            display: flex;
         }
 
-        .nav-wrapper {
-            @apply flex absolute left-0 right-0 top-0 bg-surface-800;
-
-            .nav.start,
-            .nav.end {
-                @apply flex flex-col;
-            }
+		.nav .options .nav-item {
+            flex-direction: row;
         }
 
-        .nav-item {
-            @apply flex-row;
-
-            .icon {
-                @apply w-8 h-8 text-base;
-            }
-
-            .title {
-                @apply flex mt-0;
-            }
+		.nav .options .title {
+            display: flex;
+            margin-top: 0;
         }
-    }
+
+		:global(.nav .options .icon i) {
+            font-size: 16px !important;
+        }
+		
+		.hamburger {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+            width: 100%;
+			z-index: 10;
+			padding: 8px;
+			cursor: pointer;
+			user-select: none;
+		}
+
+		#shitty-checkbox-hack:checked + .nav .options {
+			transform: translate(0, -100%);
+		}
+	}
 </style>
