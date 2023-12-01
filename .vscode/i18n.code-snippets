@@ -1,0 +1,57 @@
+{
+	// Place your Skeleton workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"translate": {
+		"scope": "svelte,javascript,typescript",
+		"prefix": "t",
+		"body": [
+			"\\$t{$1}",
+		],
+		"description": "New translation"
+	},
+	"translate block": {
+		"scope": "svelte,javascript,typescript",
+		"prefix": "T",
+		"body": [
+			"{\\$t('$1')}",
+		],
+		"description": "New translation"
+	},
+	"translate get": {
+		"scope": "svelte,javascript,typescript",
+		"prefix": "tg",
+		"body": [
+			"t.get('$1')$0",
+		],
+		"description": "New translation"
+	},
+	"import i18n": {
+		"scope": "svelte,javascript,typescript",
+		"prefix": "i18n",
+		"body": [
+			"import { t } from '\\$lib/i18n';",
+		],
+		"description": "import i18n"
+	},
+	"import fontawesome": {
+		"scope": "svelte,javascript,typescript",
+		"prefix": "fa",
+		"body": [
+			"import FontAwesome from '\\$lib/components/util/FontAwesome.svelte';",
+		],
+		"description": "import font awesome"
+	},
+	"i18n key": {
+		"scope": "json",
+		"prefix": "key",
+		"body": [
+			"\"$1\": \"$2\"$0",
+		],
+		"description": "import i18n"
+	}
+}
