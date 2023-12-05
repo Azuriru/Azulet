@@ -104,10 +104,10 @@
     <div class="tokens flex flex-col mt-8 uppercase tracking-widest font-medium text-sm">
         <div class="header mb-2">tokens</div>
         {#each tokens as token}
-            <div class="token flex items-center justify-between py-2 px-3 mb-2 bg-gradient-to-r from-surface-700 to-surface-9  00">
+            <div class="token flex items-center justify-between py-2 px-3 mb-2 bg-gradient-to-r from-surface-700 to-surface-900">
                 <div class="flex items-center ">
                     <div class="flex img w-12 mr-2">
-                        <img src="./src/lib/assets/networks/{token.toLowerCase()}.png" alt="a"/>
+                        <img src="networks/{token.toLowerCase()}.png" alt="a"/>
                     </div>
                     <div class="flex flex-col">
                         <div>{token}</div>
