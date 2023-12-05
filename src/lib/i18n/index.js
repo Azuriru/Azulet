@@ -18,6 +18,11 @@ export const config = {
             locale: 'en',
             key: 'nav',
             loader: async () => (await import('./en/Navigation.json')).default,
+        },
+        {
+            locale: 'en',
+            key: 'dashboard',
+            loader: async () => (await import('./en/Dashboard.json')).default,
         }
     ],
 };

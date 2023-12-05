@@ -1,0 +1,9 @@
+{
+    "bal": "balance",
+    "bal-trans": "transferable balance",
+    "bal-locked": "locked balance",
+    "act": "actions",
+    "act-send": "send",
+    "act-receive": "receive",
+    "act-buy": "buy"
+}
