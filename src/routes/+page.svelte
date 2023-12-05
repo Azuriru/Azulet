@@ -60,7 +60,7 @@
     <div class="flex flex-col justify-around md:flex-row items-center md:h-min">
         <div class="balance flex basis-4/5 flex-col w-full md:flex-row h-min justify-evenly md:pr-5 uppercase font-medium tracking-widest text-sm text-center">
             {#each balGroup as group, i}
-                <div class="flex flex-col flex-grow justify-evenly items-center">
+                <div class="{i === 0 ? 'flex bg-gradient-to-r md:bg-none md:border-0 from-transparent via-surface-700 to-transparent border-y-2 [border-image:_linear-gradient(to_right,_transparent,_#ffffff1a_25%_75%,_transparent)_1] py-4' : 'hidden md:flex'} flex-col flex-grow justify-evenly items-center">
                     <div class="title flex items-center justify-center mb-1">
                         {#if i === 0}
                             <!-- <div class="w-4 mr-2"/> -->
@@ -75,7 +75,7 @@
                     <div class="value" class:font-mono={!visible}>{visible ? `$${number(2)}` : '******'}</div>
                 </div>
                 {#if i !== balGroup.length -1 }
-                    <div class="divider my-2 md:my-0 md:mx-2 border border-white/20" />
+                    <div class="divider hidden md:flex my-2 md:my-0 md:mx-2 border border-white/20" />
                 {/if}
             {/each}
             <button class="visibility hidden md:flex items-center mt-2 md:mt-0 md:ml-2" on:click={() => visible = !visible}>
@@ -104,7 +104,7 @@
     <div class="tokens flex flex-col mt-8 uppercase tracking-widest font-medium text-sm">
         <div class="header mb-2">tokens</div>
         {#each tokens as token}
-            <div class="token flex items-center justify-between py-2 px-3 mb-2 bg-surface-700">
+            <div class="token flex items-center justify-between py-2 px-3 mb-2 bg-gradient-to-r from-surface-700 to-surface-9  00">
                 <div class="flex items-center ">
                     <div class="flex img w-12 mr-2">
                         <img src="./src/lib/assets/networks/{token.toLowerCase()}.png" alt="a"/>

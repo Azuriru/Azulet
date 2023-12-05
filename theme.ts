@@ -88,11 +88,11 @@ export const cataclysm: CustomThemeConfig = {
 		"--color-error-800": "126 31 46", // #7e1f2e
 		"--color-error-900": "103 25 38", // #671926
 		// surface | #00394d 
-		"--color-surface-50": "217 225 228", // #d9e1e4
-		"--color-surface-100": "204 215 219", // #ccd7db
-		"--color-surface-200": "191 206 211", // #bfced3
-		"--color-surface-300": "153 176 184", // #99b0b8
-		"--color-surface-400": "77 116 130", // #4d7482
+		"--color-surface-50": "15 112 144", // #99bac6
+		"--color-surface-100": "0 95 126", // #4d869b
+		"--color-surface-200": "0 82 112", // #005270
+		"--color-surface-300": "0 74 101", // #004a65
+		"--color-surface-400": "0 62 84", // #003e54
 		"--color-surface-500": "0 57 77", // #00394d
 		"--color-surface-600": "0 51 69", // #003345
 		"--color-surface-700": "0 43 58", // #002b3a
