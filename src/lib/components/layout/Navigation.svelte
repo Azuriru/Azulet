@@ -3,7 +3,6 @@
     import { t } from '$lib/i18n';
     import FontAwesome from '$lib/components/util/FontAwesome.svelte';
     import logo from '$lib/assets/logo.png';
-    import logo_text from '$lib/assets/logo_text.png';
 
     const navstart = [
         ['layer-group', t.get('nav.dashboard'), '/' ],
@@ -23,18 +22,18 @@
 
 <nav class="navigation">
 	<input type="checkbox" id="shitty-checkbox-hack" class="hidden" />
-	<div class="nav flex w-full md:h-full uppercase font-medium tracking-widest">
+	<div class="nav flex w-full md:h-full capitalize font-medium">
         <div class="options flex flex-1 md:flex-col bg-surface-800 md:bg-transparent">
             <div class="nav-start flex md:flex-col justify-evenly flex-1">
                 <div class="brand nav-item hidden md:flex justify-center items-center h-36">
                     <img src={logo} alt="logo" class="w-28"/>
                 </div>
                 {#each navstart as [ name, title, route ]}
-                    <a class="nav-item hover:bg-surface-400 hover:md:bg-gradient-to-r hover:md:bg-transparent hover:md:from-surface-200 from-surface-300 to-transparent flex flex-col md:flex-row md:flex-row-reverse items-center flex-shrink-0 px-2 py-2 md:pl-4 md:py-2 {$page.url.pathname === route ? 'bg-surface-600 md:bg-transparent md:bg-gradient-to-r' : ''}" href={route}>
+                    <a class="nav-item flex-grow hover:bg-surface-400 hover:md:bg-gradient-to-r hover:md:bg-transparent hover:md:from-surface-200 from-surface-300 to-transparent flex flex-col md:flex-row md:flex-row-reverse items-center flex-shrink-0 px-2 py-2 md:pl-4 md:py-2 {$page.url.pathname === route ? 'bg-surface-600 md:bg-transparent md:bg-gradient-to-r' : ''}" href={route}>
                         <div class="icon flex items-center justify-center w-10 h-10 md:w-8 md:h-8">
                             <FontAwesome {name} size="2xl" classes="md:text-base"/>
                         </div>
-                        <div class="title sm:flex hidden mt-1 md:mt-0 md:mr-1 text-xs whitespace-nowrap">
+                        <div class="title sm:flex hidden mt-1 md:mt-0 md:mr-1 whitespace-nowrap">
                             {title}
                         </div>
                     </a>
@@ -47,7 +46,7 @@
                         <div class="icon flex items-center justify-center w-10 h-10 md:w-8 md:h-8">
                             <FontAwesome {name} size="2xl" classes="md:text-base"/>
                         </div>
-                        <div class="title sm:flex hidden mt-1 md:mt-0 md:mr-1 text-xs whitespace-nowrap">
+                        <div class="title sm:flex hidden mt-1 md:mt-0 md:mr-1 whitespace-nowrap">
                             {title}
                         </div>
                     </a>
