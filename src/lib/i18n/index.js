@@ -23,6 +23,11 @@ export const config = {
             locale: 'en',
             key: 'dashboard',
             loader: async () => (await import('./en/Dashboard.json')).default,
+        },
+        {
+            locale: 'en',
+            key: 'login',
+            loader: async () => (await import('./en/Login.json')).default,
         }
     ],
 };

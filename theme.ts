@@ -22,40 +22,40 @@ export const cataclysm: CustomThemeConfig = {
 		"--on-surface": "255 255 255",
 		// =~= Theme Colors  =~=
 		// primary | #009494 
-		"--color-primary-50": "217 239 239", // #d9efef
-		"--color-primary-100": "204 234 234", // #cceaea
-		"--color-primary-200": "191 228 228", // #bfe4e4
-		"--color-primary-300": "153 212 212", // #99d4d4
-		"--color-primary-400": "77 180 180", // #4db4b4
+		"--color-primary-50": "102 250 250", // #66fafa
+		"--color-primary-100": "81 226 226", // #51e2e2
+		"--color-primary-200": "58 207 207", // #3acfcf
+		"--color-primary-300": "50 191 191", // #32bfbf
+		"--color-primary-400": "29 169 169", // #1da9a9
 		"--color-primary-500": "0 148 148", // #009494
 		"--color-primary-600": "0 133 133", // #008585
 		"--color-primary-700": "0 111 111", // #006f6f
 		"--color-primary-800": "0 89 89", // #005959
 		"--color-primary-900": "0 73 73", // #004949
 		// secondary | #007399 
-		"--color-secondary-50": "217 234 240", // #d9eaf0
-		"--color-secondary-100": "204 227 235", // #cce3eb
-		"--color-secondary-200": "191 220 230", // #bfdce6
-		"--color-secondary-300": "153 199 214", // #99c7d6
-		"--color-secondary-400": "77 157 184", // #4d9db8
+		"--color-secondary-50": "102 211 247", // #004949
+		"--color-secondary-100": "71 190 229", // #47bee5
+		"--color-secondary-200": "53 177 218", // #35b1da
+		"--color-secondary-300": "34 154 194", // #229ac2
+		"--color-secondary-400": "11 130 170", // #0b82aa
 		"--color-secondary-500": "0 115 153", // #007399
 		"--color-secondary-600": "0 104 138", // #00688a
 		"--color-secondary-700": "0 86 115", // #005673
 		"--color-secondary-800": "0 69 92", // #00455c
 		"--color-secondary-900": "0 56 75", // #00384b
 		// tertiary | #4e44d5 
-		"--color-tertiary-50": "228 227 249", // #e4e3f9
-		"--color-tertiary-100": "220 218 247", // #dcdaf7
-		"--color-tertiary-200": "211 208 245", // #d3d0f5
-		"--color-tertiary-300": "184 180 238", // #b8b4ee
-		"--color-tertiary-400": "131 124 226", // #837ce2
-		"--color-tertiary-500": "78 68 213", // #4e44d5
-		"--color-tertiary-600": "70 61 192", // #463dc0
-		"--color-tertiary-700": "59 51 160", // #3b33a0
-		"--color-tertiary-800": "47 41 128", // #2f2980
-		"--color-tertiary-900": "38 33 104", // #262168
+		"--color-tertiary-50": "169 162 254", // #a9a2fe
+		"--color-tertiary-100": "143 135 233", // #8f87e9
+		"--color-tertiary-200": "122 114 214", // #7a72d6
+		"--color-tertiary-300": "107 98 208", // #6b62d0
+		"--color-tertiary-400": "92 82 201", // #5c52c9
+		"--color-tertiary-500": "76 66 189", // #4c42bd
+		"--color-tertiary-600": "68 59 170", // #443baa
+		"--color-tertiary-700": "57 50 142", // #39328e
+		"--color-tertiary-800": "46 40 113", // #2e2871
+		"--color-tertiary-900": "37 32 93", // #25205d
 		// success | #4ae3a8 
-		"--color-success-50": "228 251 242", // #e4fbf2
+		"--color-success-50": "228 251 242", // #0f7090
 		"--color-success-100": "219 249 238", // #dbf9ee
 		"--color-success-200": "210 248 233", // #d2f8e9
 		"--color-success-300": "183 244 220", // #b7f4dc
@@ -88,8 +88,8 @@ export const cataclysm: CustomThemeConfig = {
 		"--color-error-800": "126 31 46", // #7e1f2e
 		"--color-error-900": "103 25 38", // #671926
 		// surface | #00394d 
-		"--color-surface-50": "15 112 144", // #99bac6
-		"--color-surface-100": "0 95 126", // #4d869b
+		"--color-surface-50": "15 112 144", // #0f7090
+		"--color-surface-100": "0 95 126", // #0f7090
 		"--color-surface-200": "0 82 112", // #005270
 		"--color-surface-300": "0 74 101", // #004a65
 		"--color-surface-400": "0 62 84", // #003e54

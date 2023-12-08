@@ -1,0 +1,10 @@
+{
+	"add icon": {
+		"scope": "svelte",
+		"prefix": "ico",
+		"body": [
+			"import FontAwesome from '\\$lib/components/util/FontAwesome.svelte';",
+		],
+		"description": "import ico"
+	}
+}

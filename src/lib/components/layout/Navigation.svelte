@@ -5,12 +5,12 @@
     import logo from '$lib/assets/logo.png';
 
     const navstart = [
-        ['layer-group', t.get('nav.dashboard'), '/' ],
-        ['seedling', t.get('nav.stake'), '/stake'],
-        ['circle-nodes', t.get('nav.dapps') ],
-        ['clock', t.get('nav.history') ],
-        ['star', t.get('nav.watchlist') ],
-        ['gear', t.get('nav.settings'), '/settings' ]
+        ['layer-group', t.get('nav.dashboard'), '/'],
+        ['seedling', t.get('nav.stake')],
+        ['circle-nodes', t.get('nav.dapps')],
+        ['clock', t.get('nav.history')],
+        ['star', t.get('nav.watchlist')],
+        ['gear', t.get('nav.settings')]
     ];
     
     const navend = [
@@ -25,9 +25,9 @@
 	<div class="nav flex w-full md:h-full capitalize font-medium">
         <div class="options flex flex-1 md:flex-col bg-surface-800 md:bg-transparent">
             <div class="nav-start flex md:flex-col justify-evenly flex-1">
-                <div class="brand nav-item hidden md:flex justify-center items-center h-36">
+                <a href="sandbox" class="brand nav-item hidden md:flex justify-center items-center h-36">
                     <img src={logo} alt="logo" class="w-28"/>
-                </div>
+                </a>
                 {#each navstart as [ name, title, route ]}
                     <a class="nav-item flex-grow hover:bg-surface-400 hover:md:bg-gradient-to-r hover:md:bg-transparent hover:md:from-surface-200 from-surface-300 to-transparent flex flex-col md:flex-row md:flex-row-reverse items-center flex-shrink-0 px-2 py-2 md:pl-4 md:py-2 {$page.url.pathname === route ? 'bg-surface-600 md:bg-transparent md:bg-gradient-to-r' : ''}" href={route}>
                         <div class="icon flex items-center justify-center w-10 h-10 md:w-8 md:h-8">
